@@ -1,6 +1,8 @@
 import React, { useEffect, useState, useRef } from 'react'
 import { CallControls, SpeakerLayout, useStreamVideoClient, StreamCall } from '@stream-io/video-react-sdk';
 import "@stream-io/video-react-sdk/dist/css/styles.css";
+import { TranscriptPanel } from './transcript';
+
 const MeetingRoom = ({ callId, onLeave, userId }) => {
 
     const client = useStreamVideoClient();
@@ -100,7 +102,9 @@ const MeetingRoom = ({ callId, onLeave, userId }) => {
                             <CallControls onLeave={handleLeaveClick} /></div>
                     </div>
 
-                    <div className='bg-gray-800 rounded-2xl border border-gray-700 overflow-hidden shadow-2xl'>Transcripts</div>
+                    <div className='bg-gray-800 rounded-2xl border border-gray-700 overflow-hidden shadow-2xl'>
+                        <TranscriptPanel />
+                    </div>
 
                 </div>
             </div>
