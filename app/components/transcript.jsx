@@ -23,7 +23,7 @@ export function TranscriptPanel() {
     const callId = process.env.NEXT_PUBLIC_CALL_ID;
     const channel = client.channel("messaging", callId);
 
-    // Watch the channel
+    // used to watch the channel
     channel.watch();
 
     console.log("✅ Listening for closed captions");
