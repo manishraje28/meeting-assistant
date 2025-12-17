@@ -55,7 +55,7 @@ export function TranscriptPanel() {
         return;
       }
 
-      console.log("📨 New message:", message);
+      console.log("There is a New message:", message);
 
       // Check if it's a note message (has custom.type and custom.note_type)
       // if (message?.custom?.type === "note") {
